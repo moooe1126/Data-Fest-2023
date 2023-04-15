@@ -26,7 +26,7 @@ df_a <- df[,-3] %>%
 Category_top10 <- df_a %>%
   group_by(Category)  %>%
   arrange(desc(n))%>%
-  slice(1:5)
+  slice(1:10)
 Category_top10 <- Category_top10[-c(51:55),]
 
 write.csv(Category_top10, file = "Category_top10_AttorneysMO")
